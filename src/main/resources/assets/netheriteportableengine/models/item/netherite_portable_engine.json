@@ -1,0 +1,7 @@
+{
+  "parent": "simulated:block/portable_engine/item",
+  "textures": {
+    "0": "netheriteportableengine:block/portable_engine/netherite",
+    "particle": "netheriteportableengine:block/portable_engine/netherite"
+  }
+}
