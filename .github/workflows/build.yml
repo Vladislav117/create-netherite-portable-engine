@@ -28,12 +28,15 @@ jobs:
       - name: Make Gradle wrapper executable
         run: chmod +x ./gradlew
 
-      - name: Generate data and build
-        run: ./gradlew runData build --no-daemon --build-cache
+      - name: Generate data
+        run: ./gradlew runData --no-daemon --build-cache
+
+      - name: Build with Gradle
+        run: ./gradlew clean build --no-daemon --build-cache
 
       - name: Upload mod artifact
         uses: actions/upload-artifact@v4
         with:
-          name: mod-jar
+          name: mod
           path: build/libs/*.jar
           if-no-files-found: error
